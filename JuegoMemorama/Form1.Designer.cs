@@ -50,7 +50,7 @@
             this.btnReiniciar.BackColor = System.Drawing.Color.Black;
             this.btnReiniciar.Font = new System.Drawing.Font("Cambria", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReiniciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReiniciar.Location = new System.Drawing.Point(1483, 852);
+            this.btnReiniciar.Location = new System.Drawing.Point(1464, 852);
             this.btnReiniciar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(332, 71);
@@ -64,7 +64,7 @@
             this.lblReset.AutoSize = true;
             this.lblReset.Font = new System.Drawing.Font("Cambria", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReset.ForeColor = System.Drawing.Color.White;
-            this.lblReset.Location = new System.Drawing.Point(1530, 773);
+            this.lblReset.Location = new System.Drawing.Point(1511, 773);
             this.lblReset.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReset.Name = "lblReset";
             this.lblReset.Size = new System.Drawing.Size(186, 61);
@@ -76,7 +76,7 @@
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Cambria", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecord.ForeColor = System.Drawing.Color.White;
-            this.lblRecord.Location = new System.Drawing.Point(1713, 773);
+            this.lblRecord.Location = new System.Drawing.Point(1694, 773);
             this.lblRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecord.Name = "lblRecord";
             this.lblRecord.Size = new System.Drawing.Size(57, 61);

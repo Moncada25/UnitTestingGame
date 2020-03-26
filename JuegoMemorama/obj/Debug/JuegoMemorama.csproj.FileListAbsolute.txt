@@ -27,9 +27,9 @@ C:\Users\1742708\Documents\Workspace\JuegoMemoriaBanco\JuegoMemorama\obj\Debug\J
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\bin\Debug\JuegoMemorama.exe.config
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\bin\Debug\JuegoMemorama.exe
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\bin\Debug\JuegoMemorama.pdb
-C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\obj\Debug\JuegoMemorama.csprojAssemblyReference.cache
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\obj\Debug\JuegoMemorama.Form1.resources
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\obj\Debug\JuegoMemorama.Properties.Resources.resources
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\obj\Debug\JuegoMemorama.csproj.GenerateResource.cache
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\obj\Debug\JuegoMemorama.exe
 C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\obj\Debug\JuegoMemorama.pdb
+C:\Users\1742708\Documents\Workspace\PruebasUnitarias\JuegoMemorama\obj\Debug\JuegoMemorama.csprojAssemblyReference.cache
