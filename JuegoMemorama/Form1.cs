@@ -86,7 +86,7 @@ namespace JuegoMemorama {
                 CartaActual = Convert.ToInt32(CartasRevueltas[Convert.ToInt32(CartasSeleccionadasUsuario.Name) - 1]);
                 CartasSeleccionadasUsuario.Image = RecuperarImagen(CartaActual);
                 CartasSeleccionadas.Add(CartasSeleccionadasUsuario);
-                //  2 Veces se realizo el evento del click
+                //  2 Veces se realiza el evento del click
                 if (CartasSeleccionadas.Count == 2) {
                     CartaTemporal1 = (PictureBox)CartasSeleccionadas[0];
                     CartaTemporal2 = (PictureBox)CartasSeleccionadas[1];
@@ -98,39 +98,26 @@ namespace JuegoMemorama {
                         if (CantidadDeCartasVolteadas > 7) {
                             lblResult.Text = "Congratulations!";
                         }
-                        CartaTemporal1.Enabled = false; CartaTemporal2.Enabled = false;
+                        CartaTemporal1.Enabled = false; 
+                        CartaTemporal2.Enabled = false;
                         CartasSeleccionadas.Clear();
                     } else {
                         timer1.Enabled = true;
                         timer1.Start();
                     }
-
-
                 }
             }
 
         }
-        public Bitmap RecuperarImagen(int NumeroImagen) {
-            Bitmap TmpImg = new Bitmap(200, 100);
-            switch (NumeroImagen) {
-                case 0:
-                    TmpImg = Properties.Resources.img1;
-                    break;
-                default:
-                    TmpImg = (Bitmap)Properties.Resources.ResourceManager.GetObject("img" + NumeroImagen);
-                    break;
-            }
-            return TmpImg;
-
-        }
+        public Bitmap RecuperarImagen(int NumeroImagen) => (Bitmap)Properties.Resources.ResourceManager.GetObject("img" + NumeroImagen);
 
         private void timer1_Tick(object sender, EventArgs e) {
-            int TiempoVirarCarta = 1;
-            if (TiempoVirarCarta == 1) {
+            int TiempoGirarCarta = 1;
+            if (TiempoGirarCarta == 1) {
                 CartaTemporal1.Image = Properties.Resources.Girada;
                 CartaTemporal2.Image = Properties.Resources.Girada;
                 CartasSeleccionadas.Clear();
-                TiempoVirarCarta = 0;
+                TiempoGirarCarta = 0;
                 timer1.Stop();
 
             }

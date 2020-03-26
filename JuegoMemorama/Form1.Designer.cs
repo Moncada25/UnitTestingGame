@@ -39,10 +39,10 @@
             // 
             // PanelJuego
             // 
-            this.PanelJuego.Location = new System.Drawing.Point(18, 18);
+            this.PanelJuego.Location = new System.Drawing.Point(18, 14);
             this.PanelJuego.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanelJuego.Name = "PanelJuego";
-            this.PanelJuego.Size = new System.Drawing.Size(1317, 1018);
+            this.PanelJuego.Size = new System.Drawing.Size(1317, 989);
             this.PanelJuego.TabIndex = 0;
             // 
             // btnReiniciar
@@ -63,7 +63,8 @@
             // 
             this.lblReset.AutoSize = true;
             this.lblReset.Font = new System.Drawing.Font("Cambria", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReset.Location = new System.Drawing.Point(1531, 786);
+            this.lblReset.ForeColor = System.Drawing.Color.White;
+            this.lblReset.Location = new System.Drawing.Point(1530, 773);
             this.lblReset.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReset.Name = "lblReset";
             this.lblReset.Size = new System.Drawing.Size(186, 61);
@@ -74,7 +75,8 @@
             // 
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Cambria", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.Location = new System.Drawing.Point(1714, 786);
+            this.lblRecord.ForeColor = System.Drawing.Color.White;
+            this.lblRecord.Location = new System.Drawing.Point(1713, 773);
             this.lblRecord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRecord.Name = "lblRecord";
             this.lblRecord.Size = new System.Drawing.Size(57, 61);
@@ -102,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.lblRecord);
