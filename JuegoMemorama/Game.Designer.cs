@@ -1,6 +1,6 @@
 ﻿namespace JuegoMemorama
 {
-    partial class Form1
+    partial class Game
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -29,35 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.PanelJuego = new System.Windows.Forms.Panel();
-            this.btnReiniciar = new System.Windows.Forms.Button();
+            this.GamePanel = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
             this.lblReset = new System.Windows.Forms.Label();
             this.lblRecord = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timeChange = new System.Windows.Forms.Timer(this.components);
             this.lblResult = new System.Windows.Forms.Label();
+            this.lblTimer = new System.Windows.Forms.Label();
+            this.timeGame = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // PanelJuego
+            // GamePanel
             // 
-            this.PanelJuego.Location = new System.Drawing.Point(18, 14);
-            this.PanelJuego.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PanelJuego.Name = "PanelJuego";
-            this.PanelJuego.Size = new System.Drawing.Size(1317, 989);
-            this.PanelJuego.TabIndex = 0;
+            this.GamePanel.Location = new System.Drawing.Point(18, 14);
+            this.GamePanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GamePanel.Name = "GamePanel";
+            this.GamePanel.Size = new System.Drawing.Size(1317, 989);
+            this.GamePanel.TabIndex = 0;
             // 
-            // btnReiniciar
+            // btnReset
             // 
-            this.btnReiniciar.BackColor = System.Drawing.Color.Black;
-            this.btnReiniciar.Font = new System.Drawing.Font("Cambria", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReiniciar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReiniciar.Location = new System.Drawing.Point(1464, 852);
-            this.btnReiniciar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnReiniciar.Name = "btnReiniciar";
-            this.btnReiniciar.Size = new System.Drawing.Size(332, 71);
-            this.btnReiniciar.TabIndex = 1;
-            this.btnReiniciar.Text = "Reset Game";
-            this.btnReiniciar.UseVisualStyleBackColor = false;
-            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            this.btnReset.BackColor = System.Drawing.Color.Black;
+            this.btnReset.Font = new System.Drawing.Font("Cambria", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReset.Location = new System.Drawing.Point(1464, 852);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(332, 71);
+            this.btnReset.TabIndex = 1;
+            this.btnReset.Text = "Reset Game";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // lblReset
             // 
@@ -83,10 +85,10 @@
             this.lblRecord.TabIndex = 3;
             this.lblRecord.Text = "0";
             // 
-            // timer1
+            // timeChange
             // 
-            this.timer1.Interval = 500;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timeChange.Interval = 500;
+            this.timeChange.Tick += new System.EventHandler(this.timeChange_Tick);
             // 
             // lblResult
             // 
@@ -100,19 +102,35 @@
             this.lblResult.Size = new System.Drawing.Size(0, 61);
             this.lblResult.TabIndex = 4;
             // 
-            // Form1
+            // lblTimer
+            // 
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Cambria", 26F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblTimer.ForeColor = System.Drawing.Color.White;
+            this.lblTimer.Location = new System.Drawing.Point(1553, 609);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(161, 61);
+            this.lblTimer.TabIndex = 5;
+            this.lblTimer.Text = "00:00";
+            // 
+            // timeGame
+            // 
+            this.timeGame.Tick += new System.EventHandler(this.timeGame_Tick);
+            // 
+            // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.lblTimer);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.lblReset);
-            this.Controls.Add(this.btnReiniciar);
-            this.Controls.Add(this.PanelJuego);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.GamePanel);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Feria del Conocimiento - Pruebas Unitarias";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -123,12 +141,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel PanelJuego;
-        private System.Windows.Forms.Button btnReiniciar;
+        private System.Windows.Forms.Panel GamePanel;
+        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblReset;
         private System.Windows.Forms.Label lblRecord;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timeChange;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.Timer timeGame;
     }
 }
 
